@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopify | Home</title>
+  <link rel="shortcut icon" href="./image/logo.png" type="image/x-icon">
+  <!-- Custom link -->
+  <link rel="stylesheet" href="./css/Home.css">
+  <!-- Fontawesome link -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <!-- Custom script -->
+  <script src="./js/home.js" defer></script>
+</head>
+
+<body>
+  <div class="Loading__Contaner " Loading__Contaner>
+    <div class="Loading"></div>
+    <h4>Loading...</h4>
+  </div>
+  <div class="Container" Container>
+
+    <header>
+      <div class="logo"><i class="fab fa-shopify"></i> Shopify</div>
+      <div class="Header__Right">
+        <button class="Btn__Icon" Btn__OpanCart>
+          <i class="fa fa-shopping-cart"></i>
+        </button>
+        <button class="Btn__Icon" Btn__OpanUser>
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <main class="Main" Main>
+
+      <div class="Filter__Container" Filter__Container>
+        <div class="Filter__Overlay" Filter__Overlay></div>
+        <div class="Filter__Header">
+          <button class="Btn__Icon" Btn__FilterClose>
+            <i class="fa fa-times"></i>
+            <i class="fa fa-angle-left"></i>
+          </button>
+          <h3 class="Filter__Title" Filter__Title>Product Filtering</h3>
+          <button class="Btn__Clear" Btn__FilterClear>Clear</button>
+        </div>
+
+        <div class="Input__Container">
+          <div class="Input__Wrapper">
+            <!-- <span class="Input__Title">Search</span> -->
+            <label for="Search__Input" class="Search__Input__Wrapper">
+              <i class="fa fa-search"></i>
+              <input type="search" class="Input" placeholder="Quick Search..." id="Search__Input" Search__Input>
+            </label>
+          </div>
+          <div class="Input__Wrapper row">
+            <label>
+              <span class="Input__Title">Price Start</span>
+              <input type="number" class="Input" PriceFrom__Input>
+            </label>
+            <label>
+              <span class="Input__Title">Price End</span>
+              <input type="number" class="Input" PriceEnd__Input>
+            </label>
+          </div>
+          <div class="Input__Wrapper">
+            <span class="Input__Title">Select Brend</span>
+            <select class="Input" Select__Brend>
+              <option value="">Brend</option>
+            </select>
+          </div>
+          <div class="Input__Wrapper">
+            <span class="Input__Title">Select Category</span>
+            <select class="Input" Select__Category>
+              <option value="">Category</option>
+            </select>
+          </div>
+          <div class="Input__Wrapper">
+            <span class="Input__Title">Select Type</span>
+            <select class="Input" Select__Type>
+              <option value="">Type</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="Filter__Btn__Wrapper">
+          <button class="Btn Btn__Start__Filter" Btn__Filter>Start Filter</button>
+        </div>
+      </div>
+
+      <div class="Main__Content__Wrapper" Main__Content__Wrapper>
+        <div class="Main__Header">
+          <button class="Btn__Icon" Btn__OpanFilter>
+            <i class="fa fa-filter"></i>
+          </button>
+          <h3 class="Main__Title">Our Products</h3>
+          <select class="Select" Select__SortBy>
+            <option value="">Sort by</option>
+            <option value="Defult">Sort by Defult</option>
+            <option value="Name">Sort by Name</option>
+            <option value="Price">Sort by Price</option>
+          </select>
+        </div>
+
+        <div class="Main__Content">
+
+          <div class="Card__Item__Wrapper" Card__Item__Wrapper>
+
+            <div class="Loading__Card__Item">
+              <div class="Loading__Image__Wrapper"></div>
+              <div class="Loading__Card__Bottom">
+                <h3 class="Loading__Card__Title"></h3>
+                <span class="Loading__price"></span>
+                <button class="Loading__Btn">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+            <div class="Loading__Card__Item">
+              <div class="Loading__Image__Wrapper"></div>
+              <div class="Loading__Card__Bottom">
+                <h3 class="Loading__Card__Title"></h3>
+                <span class="Loading__price"></span>
+                <button class="Loading__Btn"> Add to Cart</button>
+              </div>
+            </div>
+            <div class="Loading__Card__Item">
+              <div class="Loading__Image__Wrapper"></div>
+              <div class="Loading__Card__Bottom">
+                <h3 class="Loading__Card__Title"></h3>
+                <span class="Loading__price"></span>
+                <button class="Loading__Btn"> Add to Cart</button>
+              </div>
+            </div>
+            <div class="Loading__Card__Item">
+              <div class="Loading__Image__Wrapper"></div>
+              <div class="Loading__Card__Bottom">
+                <h3 class="Loading__Card__Title"></h3>
+                <span class="Loading__price"></span>
+                <button class="Loading__Btn"> Add to Cart</button>
+              </div>
+            </div>
+            <div class="Loading__Card__Item">
+              <div class="Loading__Image__Wrapper"></div>
+              <div class="Loading__Card__Bottom">
+                <h3 class="Loading__Card__Title"></h3>
+                <span class="Loading__price"></span>
+                <button class="Loading__Btn">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+            <div class="Loading__Card__Item">
+              <div class="Loading__Image__Wrapper"></div>
+              <div class="Loading__Card__Bottom">
+                <h3 class="Loading__Card__Title"></h3>
+                <span class="Loading__price"></span>
+                <button class="Loading__Btn"> Add to Cart</button>
+              </div>
+            </div>
+            <div class="Loading__Card__Item">
+              <div class="Loading__Image__Wrapper"></div>
+              <div class="Loading__Card__Bottom">
+                <h3 class="Loading__Card__Title"></h3>
+                <span class="Loading__price"></span>
+                <button class="Loading__Btn"> Add to Cart</button>
+              </div>
+            </div>
+            <div class="Loading__Card__Item">
+              <div class="Loading__Image__Wrapper"></div>
+              <div class="Loading__Card__Bottom">
+                <h3 class="Loading__Card__Title"></h3>
+                <span class="Loading__price"></span>
+                <button class="Loading__Btn"> Add to Cart</button>
+              </div>
+            </div>
+            <div class="Loading__Card__Item">
+              <div class="Loading__Image__Wrapper"></div>
+              <div class="Loading__Card__Bottom">
+                <h3 class="Loading__Card__Title"></h3>
+                <span class="Loading__price"></span>
+                <button class="Loading__Btn">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+            <div class="Loading__Card__Item">
+              <div class="Loading__Image__Wrapper"></div>
+              <div class="Loading__Card__Bottom">
+                <h3 class="Loading__Card__Title"></h3>
+                <span class="Loading__price"></span>
+                <button class="Loading__Btn"> Add to Cart</button>
+              </div>
+            </div>
+            <div class="Loading__Card__Item">
+              <div class="Loading__Image__Wrapper"></div>
+              <div class="Loading__Card__Bottom">
+                <h3 class="Loading__Card__Title"></h3>
+                <span class="Loading__price"></span>
+                <button class="Loading__Btn"> Add to Cart</button>
+              </div>
+            </div>
+            <div class="Loading__Card__Item">
+              <div class="Loading__Image__Wrapper"></div>
+              <div class="Loading__Card__Bottom">
+                <h3 class="Loading__Card__Title"></h3>
+                <span class="Loading__price"></span>
+                <button class="Loading__Btn"> Add to Cart</button>
+              </div>
+            </div>
+
+            <h3 class="Text__Wait">Please Wait...</h3>
+          </div>
+
+          <footer>
+            <h3>Created by <a href="#">FSOCIETY</a></h3>
+          </footer>
+        </div>
+      </div>
+
+      <aside class="Aside__Container" Aside__Container>
+        <div class="Aside__Overlay" Aside__Overlay></div>
+
+        <div class="Aside__Header">
+          <button class="Btn__Icon" Btn__AsideClose>
+            <i class="fa fa-times"></i>
+            <i class="fa fa-angle-left"></i>
+          </button>
+          <h3 class="Aside__Title" Aside__Title>Information</h3>
+          <div></div>
+        </div>
+
+        <div class="Product__Info__Contaner" Product__Info__Contaner></div>
+
+        <div class="Product__Btn__Wrapper">
+          <button class="Btn Btn__Primary Btn__Add__Product" Btn__Add__Cart><i class="fa fa-shopping-bag"></i> Add to Cart</button>
+        </div>
+
+      </aside>
+
+    </main>
+
+    <div class="Image__Container" Image__Container>
+      <div class="Image__Overlay" Image__Overlay></div>
+      <button class="Btn__Icon" Btn__ImageClose>
+        <i class="fa fa-times"></i>
+      </button>
+      <img src="" alt="">
+    </div>
+
+  </div>
+
+</body>
+
+</html>
