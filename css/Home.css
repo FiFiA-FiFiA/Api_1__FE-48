@@ -259,313 +259,6 @@ button {
 
 /* === Header End =================== */
 
-
-/* === Nav Start =================== */
-
-.Container nav {
-  position: fixed;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  right: 0;
-  z-index: 5;
-  top: 0;
-  bottom: 0;
-  width: 85%;
-  max-width: 350px;
-  pointer-events: none;
-  height: 100%;
-  background: var(--bg__clr-dark-200);
-  border-left: 0.1rem solid var(--bg__clr-dark-700);
-  animation: Feed__In 0.3s ease-in-out forwards;
-}
-
-.Container nav.active {
-  pointer-events: painted;
-  animation: Feed__Up 0.3s ease-in-out forwards;
-}
-
-.Container nav .Nav__Overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  background: var(--bg__clr-dark-150);
-  opacity: 0.7;
-}
-
-.Container nav .Nav__Header {
-  position: sticky;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  top: 0;
-  width: 100%;
-  gap: 0.5rem;
-  padding: 1rem;
-  background: var(--bg__clr-dark-200);
-  border-bottom: 0.1rem solid var(--bg__clr-dark-700);
-  z-index: 1;
-}
-
-.Container nav .Nav__Header .Nav__Title {
-  font-size: 1.1rem;
-  color: var(--bg__clr-dark-900);
-}
-
-.Container nav .Nav__Header .Nav__Title::before {
-  content: "Your Information";
-}
-
-.Container nav .Nav__Header .Nav__Title.active::before {
-  content: "Change Password";
-}
-
-.Container nav .Nav__Header button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  background: none;
-  border: 0.1rem solid var(--bg__clr-dark-900);
-  border-radius: var(--border__radius-4);
-  height: 35px;
-  width: 35px;
-}
-
-.Container nav .Nav__Header button i {
-  font-size: 1.1rem;
-  color: var(--bg__clr-dark-900);
-}
-
-.Container nav .Nav__Header .Btn__Setting.active {
-  background: var(--primary-clr);
-  border: 0.15rem solid var(--primary-clr);
-}
-
-.Container nav .Nav__Header .Btn__Setting.active i {
-  color: var(--bg__clr-dark-150);
-}
-
-.Container nav .Nav__Content__Wrapper {
-  position: relative;
-  width: 100%;
-  flex: 1;
-  display: flex;
-}
-
-.Container nav .Nav__Content__Wrapper .Content {
-  display: none;
-  flex-direction: column;
-  flex: 1;
-  width: 100%;
-}
-
-.Container nav .Nav__Content__Wrapper .Content.active {
-  display: flex;
-  animation: Feed__Up 0.5s ease-in-out forwards;
-}
-
-.Container nav .Nav__Content__Wrapper .User__Content {
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.Container nav .Nav__Content__Wrapper .User__Content .User__Profile__Content {
-  flex: 1;
-  padding: 1rem;
-  width: 100%;
-}
-
-.Container nav .Nav__Content__Wrapper .User__Content .User__Profile__Top {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
-  margin-top: 1rem;
-}
-
-.User__Profile__Top div:last-child {
-  gap: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 1rem;
-}
-
-.User__Profile__Top div:last-child h4 {
-  text-align: center;
-  font-size: 1.1rem;
-  color: var(--bg__clr-dark-700);
-  font-weight: 400;
-  cursor: pointer;
-  padding: 0.2rem 0.5rem;
-}
-
-.Container nav .Nav__Content__Wrapper .User__Content .User__Profile__Top .User__Image {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  outline-offset: 0.2rem;
-  outline: 0.2rem solid var(--primary-clr);
-  overflow: hidden;
-}
-
-.Container nav .Nav__Content__Wrapper .User__Content .User__Profile__Top .User__Name {
-  margin-top: 1rem;
-  font-size: 1.4rem;
-  color: var(--bg__clr-dark-900);
-}
-
-.Container nav .Nav__Content__Wrapper .User__Content .User__Profile__Bottom {
-  position: relative;
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.Container nav .Nav__Content__Wrapper .User__Content .User__Profile__Bottom .User__Bio {
-  position: relative;
-  display: block;
-  width: 100%;
-  margin-bottom: 1rem;
-}
-
-.Container nav .Nav__Content__Wrapper .User__Content .User__Profile__Bottom .User__Bio h3 {
-  color: var(--bg__clr-dark-900);
-  font-size: 1.1rem;
-  font-weight: 400;
-  width: 100%;
-  border-bottom: 0.1rem solid var(--bg__clr-dark-700);
-  padding: 0.2rem;
-  margin-bottom: 0.5rem;
-}
-
-.Container nav .Nav__Content__Wrapper .User__Content .User__Profile__Bottom .User__Bio p {
-  color: var(--bg__clr-dark-700);
-  font-size: 0.9rem;
-}
-
-.Container nav .Nav__Content__Wrapper .User__Content .User__Profile__Bottom .User__Info {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 1rem;
-  border-bottom: 0.1rem solid var(--bg__clr-dark-700);
-}
-
-.Container nav .Nav__Content__Wrapper .User__Content .User__Profile__Bottom .User__Info:last-child {
-  border: none;
-}
-
-.Container nav .Nav__Content__Wrapper .User__Content .User__Profile__Bottom .User__Info h4 {
-  color: var(--bg__clr-dark-900);
-  font-size: 1rem;
-  padding: 0.2rem;
-  font-weight: 400;
-  margin-bottom: 0.5rem;
-}
-
-.Container nav .Nav__Content__Wrapper .User__Content .User__Profile__Bottom .User__Info p {
-  color: var(--bg__clr-dark-700);
-  font-size: 0.9rem;
-}
-
-.Container nav .Nav__Content__Wrapper .User__Content .User__Profile__Bottom .User__Bio p {
-  display: block;
-}
-
-.Container .Error__Text {
-  display: none;
-  padding: 0.8rem;
-  text-align: center;
-  width: auto;
-  margin: 0 1rem;
-  margin-top: 1rem;
-  border-radius: 0.4rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--primary-clr);
-  border: 0.15rem solid var(--primary-clr);
-  background: var(--primary-clr-transparent-03);
-}
-
-.Container .Error__Text.active {
-  display: block;
-}
-
-.Container nav .Nav__Content__Wrapper .Content .Input__Wrapper {
-  position: relative;
-  display: block;
-  flex: 1;
-  padding: 1rem;
-}
-
-.Container nav .Nav__Content__Wrapper .Content .Input__Wrapper .input {
-  position: relative;
-  margin-top: 1rem;
-  width: 100%;
-  height: 45px;
-  border: none;
-  outline: 0.1rem solid var(--bg__clr-dark-700);
-  background: none;
-  border-radius: 0.4rem;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: var(--bg__clr-dark-700);
-}
-
-.Container nav .Nav__Content__Wrapper .Content .Input__Wrapper .input:first-child {
-  margin: 0;
-}
-
-.Container nav .Nav__Content__Wrapper .Content .Input__Wrapper .input:focus {
-  outline: 0.15rem solid var(--primary-clr);
-  color: var(--bg__clr-light);
-}
-
-.Container nav .Nav__Button__Wrapper {
-  position: sticky;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem;
-  border-top: 0.1rem solid var(--bg__clr-dark-700);
-  background: var(--bg__clr-dark-200);
-}
-
-.Container nav .Nav__Button__Wrapper button {
-  margin: 0;
-  height: 40px;
-  font-size: 0.9rem;
-  display: none;
-}
-
-.Container nav .Nav__Button__Wrapper .Btn__active {
-  display: flex;
-  animation: Feed__Up 0.5s ease-in-out forwards;
-}
-
-.Container nav .Nav__Button__Wrapper.active .Btn__active {
-  display: none;
-}
-
-.Container nav .Nav__Button__Wrapper.active .Btn__hidden {
-  display: flex;
-  animation: Feed__Up 0.5s ease-in-out forwards;
-}
-
-
-/* === Nav End =================== */
-
-
 /* === Main Start =================== */
 
 .Container main {
@@ -1084,7 +777,7 @@ button {
 
 .Container main .Filter__Container .Filter__Header h3 {
   font-size: 1.2rem;
-  color: var(--bg__clr-dark-900);
+  color: var(--bg__clr-light);
   font-weight: 600;
 }
 
@@ -1093,8 +786,8 @@ button {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  background: var(--bg__clr-dark-900);
-  outline: 0.1rem solid var(--bg__clr-dark-900);
+  background: var(--bg__clr-light);
+  outline: 0.1rem solid var(--bg__clr-light);
   outline-offset: 0;
   border-radius: var(--border__radius-4);
   height: 35px;
@@ -1112,6 +805,7 @@ button {
   font-weight: 600;
   pointer-events: none;
   opacity: 0.5;
+  border: none;
 }
 
 .Container main .Filter__Container .Filter__Header .Btn__Clear.active {
@@ -1128,13 +822,9 @@ button {
   outline-offset: 0.05rem;
 }
 
-.Container main .Filter__Container .Filter__Header button:active {
-  color: var(--bg__clr-dark-150);
-}
-
 .Container main .Filter__Container .Filter__Header button i {
   font-size: 1.1rem;
-  color: var(--bg__clr-dark-200);
+  color: var(--bg__clr-dark-150);
 }
 
 .Container main .Filter__Container .Filter__Header button i:first-child {
@@ -1223,6 +913,7 @@ button {
 
 .Filter__Btn__Wrapper {
   position: sticky;
+  background:  var(--bg__clr-dark-150);
   bottom: 0;
   padding: 0.5rem 1rem;
   border-top: 0.1rem solid var(--bg__clr-dark-700);
@@ -1231,20 +922,15 @@ button {
 .Filter__Btn__Wrapper button {
   margin: 0;
   height: 40px;
-  color: var(--bg__clr-dark-900);
   color: var(--bg__clr-dark-150);
-  background: var(--bg__clr-dark-700);
+  background: var(--bg__clr-light);
+  outline: 0.1rem solid var(--bg__clr-light);
 }
 
 .Filter__Btn__Wrapper button:hover {
-  background: var(--bg__clr-dark-700);
-  outline-color: var(--bg__clr-dark-700);
+  outline-width: 0.15rem;
+  outline-color: var(--bg__clr-light);
 }
-
-.Filter__Btn__Wrapper button:active {
-  color: var(--bg__clr-dark-150);
-}
-
 
 /* ================== Image Start ============== */
 
