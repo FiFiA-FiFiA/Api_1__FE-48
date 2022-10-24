@@ -158,7 +158,7 @@ button {
 
 .Btn__Icon i {
   font-size: 1.2rem;
-  color: var(--bg__clr-dark-900);
+  color: var(--bg__clr-light);
 }
 
 .Btn__Icon:hover i {
@@ -172,14 +172,14 @@ button {
   align-items: center;
   justify-content: flex-end;
   height: 37px;
-  outline: 0.1rem solid var(--bg__clr-dark-700);
+  outline: 0.1rem solid var(--bg__clr-light);
   border: none;
   border-radius: 0.4rem;
   cursor: pointer;
   background: var(--bg__clr-dark-200);
   font-size: 1rem;
   font-weight: 600;
-  color: var(--bg__clr-dark-900);
+  color: var(--bg__clr-light);
   transition: 0.1s ease-in-out;
   margin: 0.7rem 0;
   text-decoration: none;
@@ -405,6 +405,8 @@ button {
   gap: 0.5rem;
   margin-bottom: 0;
   margin-top: 0.5rem;
+  color: var(--bg__clr-light);
+  outline-color: var(--primary-clr);
 }
 
 .Container main .Main__Content__Wrapper .Main__Content .Card__Item__Wrapper .Card__Item .Card__Bottom .Btn:active {
