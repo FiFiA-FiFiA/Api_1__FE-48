@@ -90,7 +90,7 @@ button {
   gap: 0.3rem;
   width: 100%;
   height: 45px;
-  outline: 0.1rem solid var(--bg__clr-dark-700);
+  outline: 0.1rem solid  var(--bg__clr-light);
   outline-offset: 0.15rem;
   border: none;
   border-radius: 0.4rem;
@@ -99,7 +99,7 @@ button {
   background: none;
   font-size: 1rem;
   font-weight: 600;
-  color: var(--bg__clr-light);
+  color: var(--bg__clr-dark-200);
   transition: 0.1s ease-in-out;
   margin: 1rem 0;
   text-decoration: none;
@@ -144,14 +144,15 @@ button {
   background: transparent;
   border-radius: 50%;
   transition: 0.2s ease-in-out;
-  outline: 0.1rem solid var(--bg__clr-dark-700);
+  outline: 0.1rem solid var(--bg__clr-light);
+  color: var(--bg__clr-dark-150);
   outline-color: transparent;
   outline-offset: -1rem;
   cursor: pointer;
 }
 
 .Btn__Icon:hover {
-  outline-color: var(--bg__clr-dark-700);
+  outline-color: var(--bg__clr-light);
   outline-offset: 0.1rem;
 }
 
@@ -596,10 +597,6 @@ button {
   outline-offset: 0.15rem;
 }
 
-.Container main aside .Aside__Header button:active {
-  color: var(--bg__clr-dark-150);
-}
-
 .Container main aside .Aside__Header button i {
   font-size: 1.1rem;
   color: var(--bg__clr-dark-200);
@@ -800,10 +797,11 @@ button {
 .Container main .Filter__Container .Filter__Header .Btn__Clear {
   width: auto;
   padding: 0.2rem 0.5rem;
-  outline-offset: 0.05rem;
+  outline-offset: 0.1rem;
   font-size: 1rem;
   font-weight: 600;
   pointer-events: none;
+  background: var(--bg__clr-light);
   opacity: 0.5;
   border: none;
 }
