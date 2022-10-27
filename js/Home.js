@@ -171,8 +171,8 @@ window.onload = () => {
 function Check__NavInput(value, Theme) {
   // Nav__Input.value = Display__Item;
 
-  let New__Theme = localStorage.getItem('Theme');
-  let New__Itme = localStorage.getItem('Item');
+  let New__Theme = localStorage.getItem('Theme') || "Light";
+  let New__Itme = localStorage.getItem('Item') || 12;
 
   if (New__Itme != value || New__Theme != Theme) {
     Btn__NavSave.classList.add('active');
@@ -548,7 +548,7 @@ function ProductOn__Display(Data__Array) {
 
   let Card__Item = document.querySelectorAll(".Card__Item");
 
-  let New__Display__Item = localStorage.getItem('Item');
+  let New__Display__Item = localStorage.getItem('Item') || 12;
   let Prodact__Item__Limit = Display__Item == Display__Item ? New__Display__Item : Display__Item;
   let Current__Page = 1;
   let Page__Count = Math.ceil(Data__Array.length / Prodact__Item__Limit);
