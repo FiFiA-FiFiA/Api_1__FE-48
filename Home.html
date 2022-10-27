@@ -27,12 +27,85 @@
       <div class="Header__Right">
         <button class="Btn__Icon" Btn__OpanCart>
           <i class="fa fa-shopping-cart"></i>
+          <span class="Cart__Count" Cart__Count>2</span>
         </button>
-        <button class="Btn__Icon" Btn__OpanUser>
+        <button class="Btn__Icon" Btn__OpanNav>
           <i class="fa fa-bars"></i>
         </button>
       </div>
     </header>
+
+    <div class="Cart__Container" Cart__Container>
+      <div class="Cart__Overlay" Cart__Overlay></div>
+
+      <div class="Cart__Header">
+        <button class="Btn__Icon" Btn__CartClose>
+          <i class="fa fa-times"></i>
+          <i class="fa fa-angle-left"></i>
+        </button>
+        <h3 class="Cart__Title">Your Cart</h3>
+        <button class="Btn__Clear" Btn__CartClear>Clear All</button>
+      </div>
+
+      <div class="Cart__Item__Wrapper" Cart__Item__Wrapper>
+        <h3 class="Text__Cart__Empty">Cart is Empty</h3>
+      </div>
+
+      <div class="Cart__Btn__Wrapper">
+        <h3>Total Price: <span class="Cart__Count" Total__Price>0</span></h3>
+        <button class="Btn Btn__Buy" Btn__Buy>Buy Now</button>
+      </div>
+    </div>
+
+    <nav class="Nav__Container" Nav__Container>
+      <div class="Nav__Overlay" Nav__Overlay></div>
+
+      <div class="Nav__Header">
+        <button class="Btn__Icon" Btn__NavClose>
+          <i class="fa fa-times"></i>
+          <i class="fa fa-angle-left"></i>
+        </button>
+        <h3 class="Nav__Title">Settings</h3>
+        <button class="Btn__Save" Btn__NavSave>Save</button>
+      </div>
+
+      <div class="Nav__Content">
+
+        <div class="Nav__Item">
+          <div class="Nav__Item__Title__Wrapper">
+            <h5 class="Nav__Item__Title">How many items show on display?</h5> <span class="Nav__Count" Nav__Count__Text></span>
+          </div>
+
+          <input type="range" class="Nav__Input" step="2" value="12" max="24" min="12" Nav__Input>
+        </div>
+
+        <div class="Nav__Item">
+          <div class="Nav__Item__Title__Wrapper">
+            <h5 class="Nav__Item__Title">Select Background Theme</h5> <span class="Nav__Count" Nav__Theme__Text></span>
+          </div>
+
+          <div class="Theme__Wrapper">
+
+            <div class="Theme__Item Light active" Btn__Theme__Item Theme="Light">
+              <div></div>
+              <h5>Light</h5>
+            </div>
+            <div class="Theme__Item Dark" Btn__Theme__Item Theme="Dark">
+              <div></div>
+              <h5>Dark</h5>
+            </div>
+            <div class="Theme__Item Dim" Btn__Theme__Item Theme="Dim">
+              <div></div>
+              <h5>Dim</h5>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </nav>
 
     <main class="Main" Main>
 
@@ -67,19 +140,19 @@
           </div>
           <div class="Input__Wrapper">
             <span class="Input__Title">Select Brend</span>
-            <select class="Input" Select__Brend>
-              <option value="" selected>Brend</option>
+            <select class="Input" Select__Brend disabled>
+              <option value="">Brend</option>
             </select>
           </div>
           <div class="Input__Wrapper">
             <span class="Input__Title">Select Category</span>
-            <select class="Input" Select__Category>
+            <select class="Input" Select__Category disabled>
               <option value="">Category</option>
             </select>
           </div>
           <div class="Input__Wrapper">
             <span class="Input__Title">Select Type</span>
-            <select class="Input" Select__Type>
+            <select class="Input" Select__Type disabled>
               <option value="">Type</option>
             </select>
           </div>
@@ -212,6 +285,16 @@
             </div>
 
             <h3 class="Text__Wait">Please Wait...</h3>
+          </div>
+
+          <div class="Pagination__Wrapper">
+            <button class="Btn__Prev Btn__Icon" Btn__Pagination__Prev>
+              <i class="fa fa-angle-left"></i>
+            </button>
+            <div class="Pagination__Number__Wrapper" Pagination__Number__Wrapper></div>
+            <button class="Btn__Next Btn__Icon" Btn__Pagination__Next>
+              <i class="fa fa-angle-right"></i>
+            </button>
           </div>
 
           <footer>
