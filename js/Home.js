@@ -158,6 +158,11 @@ Btn__NavSave.addEventListener('click', () => {
   Check__NavInput(localStorage.getItem('Item'), localStorage.getItem('Theme'));
 });
 
+Btn__Add__Cart.addEventListener('click', () => {
+  let Item__Id = Btn__Add__Cart.getAttribute("Id");
+  Add__ToCart(Item__Id);
+});
+
 // ======= Eventlistener End ======= //
 
 window.onload = () => {
@@ -511,7 +516,7 @@ function ProductOn__Display(Data__Array) {
       <img src="${Data__Array[i].api_featured_image}" alt="">
     </div>
     <div class="Card__Bottom">
-      <h3 class="Card__Title" Id="${i}">${Data__Array[i].name}</h3>
+      <h3 class="Card__Title" Index="${i}" Id="${Data__Array[i].id}">${Data__Array[i].name}</h3>
       <span class="price">${Data__Array[i].price}${Data__Array[i].price_sign}</span>
       <button class="Btn Btn__AddCart" Index="${i}" Id="${Data__Array[i].id}">
         <i class="fa fa-shopping-bag"></i>
@@ -524,8 +529,9 @@ function ProductOn__Display(Data__Array) {
 
   document.querySelectorAll(".Card__Item .Card__Bottom .Card__Title").forEach((Title, i) => {
     Title.addEventListener("click", () => {
-      let index = Title.getAttribute('Id')
-      Opan__Aside__Container(index, Data__Array)
+      let index = Title.getAttribute('Index');
+      let id = Title.getAttribute('Id');
+      Opan__Aside__Container(index, id, Data__Array);
     });
   });
 
@@ -731,7 +737,7 @@ function Close__Image__Container() {
   Image__Container.classList.remove('active');
 }
 
-function Opan__Aside__Container(i, Data__Array) {
+function Opan__Aside__Container(i, id, Data__Array) {
   Aside__Container.classList.add('active');
   window.history.pushState({ id: 1 }, null, `?Name=${Data__Array[i].name}`);
 
@@ -766,6 +772,8 @@ function Opan__Aside__Container(i, Data__Array) {
     <a href="${Data__Array[i].product_link}" class="Info__value">${Data__Array[i].product_link}</a>
   </div>
   </div>`;
+
+  Btn__Add__Cart.setAttribute("Id", id);
 }
 
 function Close__Aside__Container() {
